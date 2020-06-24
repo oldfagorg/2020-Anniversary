@@ -28,8 +28,7 @@ dependencies {
 	runtime 'org.ow2.asm:asm-tree:7.1'
 	runtime 'org.ow2.asm:asm-commons:7.1'
 	runtime 'org.ow2.asm:asm-util:7.1'
-	implementation files("D:/Computing/PaperBin/build/libs/cache/patched_1.12.2.jar")
-	implementation files("D:/Computing/PaperBin/build/libs/plugins/ProtocolLib.jar")
+	implementation files("D:/Computing/PaperBin/build/libs/cache/patched_1.12.2.jar") // Replace this with a path to a minecraft server jar file that has been patched by paper
 }
 
 import org.apache.tools.ant.filters.ReplaceTokens
