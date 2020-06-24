@@ -1,0 +1,41 @@
+apply plugin: 'java'
+
+group = pluginGroup
+version = pluginVersion
+
+sourceCompatibility = '1.8'
+targetCompatibility = '1.8'
+
+repositories {
+	mavenCentral()
+	maven {
+		name = 'spigotmc-repo'
+		url = 'https://hub.spigotmc.org/nexus/content/repositories/snapshots/'
+	}
+	maven {
+		name = 'sonatype'
+		url = 'https://oss.sonatype.org/content/groups/public/'
+	}
+	maven {
+		name = "dmulloy2-repo"
+		url = "https://repo.dmulloy2.net/nexus/repository/public/"
+	}
+}
+
+dependencies {
+	testCompile group: 'junit', name: 'junit', version: '4.12'
+	runtime 'org.ow2.asm:asm:7.1'
+	runtime 'org.ow2.asm:asm-tree:7.1'
+	runtime 'org.ow2.asm:asm-commons:7.1'
+	runtime 'org.ow2.asm:asm-util:7.1'
+	implementation files("D:/Computing/PaperBin/build/libs/cache/patched_1.12.2.jar")
+	implementation files("D:/Computing/PaperBin/build/libs/plugins/ProtocolLib.jar")
+}
+
+import org.apache.tools.ant.filters.ReplaceTokens
+
+processResources {
+	//from(sourceSets.main.resources.srcDirs) {
+		//filter ReplaceTokens, tokens: [version: version]
+	//}
+}
